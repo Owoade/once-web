@@ -4,7 +4,7 @@ type Props = {}
 
 function useCheckoutPayload( payload: string ) {
 
-    const parsedPayload = payload.split("?")[1].split("==") ?? ["no-group", "no-group"]
+    const parsedPayload = payload?.split("?")[1]?.split("==") ?? [ undefined ]
 
     return parsedPayload
     
