@@ -5,7 +5,7 @@ export default function BadRequest() {
     return (
       <Box width={{ sm: "500px", base: "90%" }} margin="0 auto" py={5}>
         <Box textAlign={"center"}>
-          <Image src="400.png" />
+          <Image src="400.png" pointerEvents={"none"}/>
           <Heading as="h2" fontFamily={""}>
             Oops...
           </Heading>

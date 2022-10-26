@@ -7,15 +7,16 @@ import { useState } from "react"
 
 export default function Checkout() {
     const [ clicked, setClicked ] = useState( false )
+    const payload = useCheckoutPayload( window.location.href );
     return (
       <Box width={{ sm: "500px", base: "90%" }} margin="0 auto" py={5}>
         <Box textAlign={"center"}>
           <Logo />
-          <Text textAlign={"center"} my={3}>
+          <Text fontSize={{xs:"16px", base:"14px"}} textAlign={"center"} my={3}>
             {" "}
             Checkout from{" "}
             <chakra.span color="blue" fontWeight={"extrabold"}>
-              localhost
+              { payload[2] }
             </chakra.span>
           </Text>
           <Text fontSize={"14px"} color={"#5C5C5C"}>
