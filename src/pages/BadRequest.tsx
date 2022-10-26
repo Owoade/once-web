@@ -18,6 +18,7 @@ export default function BadRequest() {
                 bgColor={"#52688F"}
                 color="white"
                 _hover={{ backgroundColor: "#7391C8" }}
+                onClick={ ()=> window.close() }
             >
              Go back
             </Button>
