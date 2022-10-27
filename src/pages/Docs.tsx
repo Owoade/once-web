@@ -34,7 +34,7 @@ function Docs({}: Props) {
   }
 
   return (
-    <Box>
+    <Box overflowX={"hidden"}>
       <Wrapper>
         <HStack my={3} justifyContent="space-between" width="100%">
           <Logo />
