@@ -1,4 +1,5 @@
 import { Box, Heading, Image, chakra, Text } from "@chakra-ui/react";
+import Footer from "../components/Footer";
 import Logo from "../components/Logo";
 
 export default function Done() {
@@ -20,12 +21,7 @@ export default function Done() {
             {" "}
             Thank you {<Logo size="16px" />} again for using our checkout portal
           </Text>
-          <Text>
-            Created with 🧡 by{" "}
-            <chakra.span color="black" fontWeight={"extrabold"}>
-              Owoade
-            </chakra.span>{" "}
-          </Text>
+         <Footer />
         </Box>
       </Box>
     );

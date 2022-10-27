@@ -1,4 +1,5 @@
 import { Box, Heading, Image, Text, chakra, Button } from "@chakra-ui/react";
+import Footer from "../components/Footer";
 import Logo from "../components/Logo";
 
 export default function BadRequest() {
@@ -22,12 +23,7 @@ export default function BadRequest() {
             >
              Go back
             </Button>
-          <Text my={8}>
-            Created with 🧡 by{" "}
-            <chakra.span color="black" fontWeight={"extrabold"}>
-              Owoade
-            </chakra.span>{" "}
-          </Text>
+          <Footer />
         </Box>
       </Box>
     );

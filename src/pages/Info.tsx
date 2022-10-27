@@ -4,6 +4,7 @@ import { useState } from "react"
 import axios from "axios";
 import { Box, Text, chakra, FormControl, FormLabel, Input, Button } from "@chakra-ui/react";
 import Logo from "../components/Logo";
+import Footer from "../components/Footer";
 export default function Info() {
     const navigate = useNavigate();
     const [id, ref, host] = useCheckoutPayload(window.location.href);
@@ -94,12 +95,7 @@ export default function Info() {
               </Button>
             </form>
           </Box>
-          <Text>
-            Created with 🧡 by{" "}
-            <chakra.span color="black" fontWeight={"extrabold"}>
-              Owoade
-            </chakra.span>{" "}
-          </Text>
+         <Footer />
         </Box>
       </Box>
     );

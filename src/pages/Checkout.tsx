@@ -4,6 +4,7 @@ import { RiSearch2Line } from "react-icons/ri";
 import Logo from "../components/Logo";
 import useCheckoutPayload from "../hooks/useCheckoutPayload";
 import { useState } from "react"
+import Footer from "../components/Footer";
 
 export default function Checkout() {
     const [ clicked, setClicked ] = useState( false )
@@ -50,12 +51,7 @@ export default function Checkout() {
               />
             </Box>
           </Box>
-          <Text>
-            Created with 🧡 by{" "}
-            <chakra.span color="black" fontWeight={"extrabold"}>
-              Owoade
-            </chakra.span>{" "}
-          </Text>
+          <Footer />
         </Box>
       </Box>
     );

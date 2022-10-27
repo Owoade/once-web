@@ -31,11 +31,15 @@ import Checkout from "./pages/Checkout";
 import Done from "./pages/Done";
 import BadRequest from "./pages/BadRequest";
 
+import Once from "checkout-once"
+import Docs from "./pages/Docs";
+
+
 function App() {
   
   const payload = useCheckoutPayload(window.location.href);
 
-  if (payload.some((each) => !Boolean(each) )) {
+  if ( payload.some((each) => !Boolean(each)) && !window.location.href.includes("/docs") ) {
     return (
       <div className="App" style={{ borderTop: "9px solid #7391C8" }}>
         <BadRequest />
@@ -50,6 +54,7 @@ function App() {
           <Route path="/" element={<Info />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/done" element={<Done />} />
+          <Route path="/docs" element={<Docs />} />
         </Routes>
       </BrowserRouter>
     </div>
