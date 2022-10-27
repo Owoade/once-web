@@ -45,9 +45,7 @@ function Docs({}: Props) {
             _hover={{ backgroundColor: "#7391C8", color: "white" }}
             margin="0 auto"
             display={"block"}
-            as="a"
-            href="https://once-test.vercel.app"
-            target={"_blank"}
+            onClick={()=> window.location.replace("https://once-test.vercel.app")}
           >
             Live Demo 🔗
           </Button>
@@ -112,6 +110,9 @@ function Docs({}: Props) {
       
 
        </Box>
+
+       <Text mb={2}> <strong>amount:</strong>  This is the amount you intend to charge for the transaaction and must be passed as an integer in kobo</Text>
+       <Text> <strong>successCallback:</strong>  This method will be called when the initiated trasaction is successfull</Text>
 
        <Footer />
       </Wrapper>
