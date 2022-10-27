@@ -45,6 +45,9 @@ function Docs({}: Props) {
             _hover={{ backgroundColor: "#7391C8", color: "white" }}
             margin="0 auto"
             display={"block"}
+            as="a"
+            href="https://once-test.vercel.app"
+            target={"_blank"}
           >
             Live Demo 🔗
           </Button>
