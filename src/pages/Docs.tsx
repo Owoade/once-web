@@ -71,7 +71,7 @@ function Docs({}: Props) {
           color="white"
           _hover={{ backgroundColor: "#7391C8" }}
           margin="0 auto"
-          display={"block"}
+          display={{xs:"block", base: "none"}}
         >
           Get Started 🚀
         </Button>
