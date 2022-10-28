@@ -9,6 +9,7 @@ import {
   Code,
 } from "@chakra-ui/react";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 import Logo from "../components/Logo";
 import Wrapper from "../components/Wrapper";
@@ -32,6 +33,9 @@ function Docs({}: Props) {
     function: "#5292ca",
     string: "#92be76"
   }
+
+  const navigate = useNavigate();
+
 
   return (
     <Box overflowX={"hidden"}>
@@ -66,6 +70,7 @@ function Docs({}: Props) {
           <strong>REST API</strong>, you get to initiate <strong>test</strong>{" "}
           transactions with just an <strong>API CALL</strong>
         </Text>
+        <a href="#vjs-sdk">
         <Button
           bgColor={"#52688F"}
           color="white"
@@ -75,13 +80,14 @@ function Docs({}: Props) {
         >
           Get Started 🚀
         </Button>
+        </a>
         <HStack my={8} width="fit-content" mx="auto">
           <Text>Currently Integrated with </Text>
           <Image borderRadius={"8px"} src="flw.png" width="30px" />
           <Image borderRadius={"8px"} src="pst.jpg" width="30px" />
         </HStack>
-        <Text my={3}>Integration with <strong>Vanilla Js</strong> websites</Text>
-       <Box fontSize={{sm: "16px",xs: "14px", base: "10px"}} width="100%" padding="1em" borderRadius={"10px"} bgColor={"#171c2a"} color="white">
+        <Text id="vjs-sdk" my={3}>Integration with <strong>Vanilla Js</strong> websites</Text>
+       <Box  fontSize={{sm: "16px",xs: "14px", base: "10px"}} width="100%" padding="1em" borderRadius={"10px"} bgColor={"#171c2a"} color="white">
         <Text> { char.lt }<chakra.span color={codeSnippet.property}>script</chakra.span> <chakra.span color={codeSnippet.bracket}>src</chakra.span>=<chakra.span color={codeSnippet.string}>"https://cdn.socket.io/4.5.3/socket.io.min.js"</chakra.span> /{ char.gt}   </Text>
         <Text> { char.lt }<chakra.span color={codeSnippet.property}>script</chakra.span> <chakra.span color={codeSnippet.bracket}>src</chakra.span>=<chakra.span color={codeSnippet.string}>"https://once-checkout-vanilla-sdk.vercel.app/build/sdk.js"</chakra.span> /{ char.gt}   </Text>
         <Text> { char.lt }<chakra.span color={codeSnippet.property}>script</chakra.span>{ char.gt}</Text>
@@ -112,7 +118,7 @@ function Docs({}: Props) {
        </Box>
 
        <Text mb={2}> <strong>amount:</strong>  This is the amount you intend to charge for the transaaction and must be passed as an integer in kobo</Text>
-       <Text> <strong>successCallback:</strong>  This method will be called when the initiated trasaction is successfull</Text>
+       <Text> <strong>successCallback:</strong>  This method will be called(in real-time) when the initiated trasaction is successfull</Text>
 
        <Footer />
       </Wrapper>
