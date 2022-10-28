@@ -22,7 +22,7 @@ export default function Checkout() {
           </Text>
           <Text fontSize={"14px"} color={"#5C5C5C"}>
             {" "}
-            Please your preffered payment gateway to complete your transaction{" "}
+            Please select your preffered payment gateway to complete your transaction{" "}
           </Text>
           <Box my={10}>
             <InputGroup>
