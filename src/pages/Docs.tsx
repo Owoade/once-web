@@ -117,8 +117,8 @@ function Docs({}: Props) {
 
        </Box>
 
-       <Text mb={2}> <strong>amount:</strong>  This is the amount you intend to charge for the transaaction and must be passed as an integer in kobo</Text>
-       <Text> <strong>successCallback:</strong>  This method will be called(in real-time) when the initiated trasaction is successfull</Text>
+       <Text mb={2}> <strong>amount:</strong>  This is the amount you intend to charge for the transaaction and must be passed as an integer in kobo.</Text>
+       <Text> <strong>successCallback:</strong>  This method will be called(in real-time) when the initiated trasaction is successfull.</Text>
 
        <Footer />
       </Wrapper>
