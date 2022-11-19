@@ -17,25 +17,24 @@ import Wrapper from "../components/Wrapper";
 type Props = {};
 
 const char = {
-    openBra: `{`,
-    closeBra: `}`,
-    arrow: `=>`,
-    lt: "<",
-    gt: ">"
-}
+  openBra: `{`,
+  closeBra: `}`,
+  arrow: `=>`,
+  lt: "<",
+  gt: ">",
+};
 
 function Docs({}: Props) {
   const codeSnippet = {
     const: "#9e69b9",
     bracket: "#fbbc11",
     variableName: "whitesmoke",
-    property:"#d9655c",
+    property: "#d9655c",
     function: "#5292ca",
-    string: "#92be76"
-  }
+    string: "#92be76",
+  };
 
   const navigate = useNavigate();
-
 
   return (
     <Box overflowX={"hidden"}>
@@ -49,13 +48,15 @@ function Docs({}: Props) {
             _hover={{ backgroundColor: "#7391C8", color: "white" }}
             margin="0 auto"
             display={"block"}
-            onClick={()=> window.location.replace("https://once-test.vercel.app")}
+            onClick={() =>
+              window.location.replace("https://once-test.vercel.app")
+            }
           >
             Live Demo 🔗
           </Button>
         </HStack>
         <Heading
-          width={{sm:"600px", base: "100%"}}
+          width={{ sm: "600px", base: "100%" }}
           margin="1.5em auto 0 auto"
           textAlign="center"
           as="h2"
@@ -65,66 +66,200 @@ function Docs({}: Props) {
           Transaction <chakra.span color="#7391C8"> checkout </chakra.span> made
           easier
         </Heading>
-        <Text textAlign={"center"} my={5} width={{sm:"500px", base: "100%" }}mx="auto">
+        <Text
+          textAlign={"center"}
+          my={5}
+          width={{ sm: "500px", base: "100%" }}
+          mx="auto"
+        >
           Without <strong>generating an API KEY</strong> or spinning up a{" "}
           <strong>REST API</strong>, you get to initiate <strong>test</strong>{" "}
           transactions with just an <strong>API CALL</strong>
         </Text>
         <a href="#vjs-sdk">
-        <Button
-          bgColor={"#52688F"}
-          color="white"
-          _hover={{ backgroundColor: "#7391C8" }}
-          margin="0 auto"
-          display={{xs:"block", base: "none"}}
-        >
-          Get Started 🚀
-        </Button>
+          <Button
+            bgColor={"#52688F"}
+            color="white"
+            _hover={{ backgroundColor: "#7391C8" }}
+            margin="0 auto"
+            display={{ xs: "block", base: "none" }}
+          >
+            Get Started 🚀
+          </Button>
         </a>
         <HStack my={8} width="fit-content" mx="auto">
           <Text>Currently Integrated with </Text>
           <Image borderRadius={"8px"} src="flw.png" width="30px" />
           <Image borderRadius={"8px"} src="pst.jpg" width="30px" />
         </HStack>
-        <Text id="vjs-sdk" my={3}>Integration with <strong>Vanilla Js</strong> websites</Text>
-       <Box  fontSize={{sm: "16px",xs: "14px", base: "10px"}} width="100%" padding="1em" borderRadius={"10px"} bgColor={"#171c2a"} color="white">
-        <Text> { char.lt }<chakra.span color={codeSnippet.property}>script</chakra.span> <chakra.span color={codeSnippet.bracket}>src</chakra.span>=<chakra.span color={codeSnippet.string}>"https://cdn.socket.io/4.5.3/socket.io.min.js"</chakra.span> /{ char.gt}   </Text>
-        <Text> { char.lt }<chakra.span color={codeSnippet.property}>script</chakra.span> <chakra.span color={codeSnippet.bracket}>src</chakra.span>=<chakra.span color={codeSnippet.string}>"https://once-checkout-vanilla-sdk.vercel.app/build/sdk.js"</chakra.span> /{ char.gt}   </Text>
-        <Text> { char.lt }<chakra.span color={codeSnippet.property}>script</chakra.span>{ char.gt}</Text>
-        <pre>
-            <Text>  <chakra.span color={ codeSnippet.const }> const </chakra.span> <chakra.span color={ codeSnippet.variableName }>once</chakra.span> = <chakra.span color={ codeSnippet.const }>new</chakra.span> <chakra.span color={ codeSnippet.bracket }>Once</chakra.span>(
-                <chakra.span>{ char.openBra } <br /></chakra.span>
-            <pre>      <chakra.span color={ codeSnippet.property }>amount</chakra.span>: <chakra.span color={ codeSnippet.bracket }>3000</chakra.span>,   </pre>
-            <pre>      <chakra.span fontWeight={"extrabold"} color={ codeSnippet.function }>successCallback</chakra.span>: <chakra.span color={ codeSnippet.const }>()</chakra.span> { char.arrow } console.<chakra.span color={ codeSnippet.function }>log</chakra.span><chakra.span color={ codeSnippet.const }>(</chakra.span><chakra.span color={codeSnippet.string}>"Transaction succesfull"</chakra.span><chakra.span color={ codeSnippet.const }>)</chakra.span> </pre>                                                    
-                         <pre>  { char.closeBra })   </pre></Text>
-        </pre>
-         <Text transform="translateX(.8em)">once.<chakra.span color={ codeSnippet.function }>checkout</chakra.span><chakra.span color={ codeSnippet.const }>()</chakra.span></Text>
-        <Text>{ char.lt }/<chakra.span color={codeSnippet.property}>script</chakra.span>{ char.gt}</Text>
+        <Text id="vjs-sdk" my={3}>
+          Integration with <strong>Vanilla Js</strong> websites
+        </Text>
+        <Box
+          fontSize={{ sm: "16px", xs: "14px", base: "10px" }}
+          width="100%"
+          padding="1em"
+          borderRadius={"10px"}
+          bgColor={"#171c2a"}
+          color="white"
+        >
+          <Text>
+            {" "}
+            {char.lt}
+            <chakra.span color={codeSnippet.property}>script</chakra.span>{" "}
+            <chakra.span color={codeSnippet.bracket}>src</chakra.span>=
+            <chakra.span color={codeSnippet.string}>
+              "https://cdn.socket.io/4.5.3/socket.io.min.js"
+            </chakra.span>{" "}
+            /{char.gt}{" "}
+          </Text>
+          <Text>
+            {" "}
+            {char.lt}
+            <chakra.span color={codeSnippet.property}>script</chakra.span>{" "}
+            <chakra.span color={codeSnippet.bracket}>src</chakra.span>=
+            <chakra.span color={codeSnippet.string}>
+              "https://once-checkout-vanilla-sdk.vercel.app/build/sdk.js"
+            </chakra.span>{" "}
+            /{char.gt}{" "}
+          </Text>
+          <Text>
+            {" "}
+            {char.lt}
+            <chakra.span color={codeSnippet.property}>script</chakra.span>
+            {char.gt}
+          </Text>
+          <pre>
+            <Text>
+              {" "}
+              <chakra.span color={codeSnippet.const}> const </chakra.span>{" "}
+              <chakra.span color={codeSnippet.variableName}>once</chakra.span> ={" "}
+              <chakra.span color={codeSnippet.const}>new</chakra.span>{" "}
+              <chakra.span color={codeSnippet.bracket}>Once</chakra.span>(
+              <chakra.span>
+                {char.openBra} <br />
+              </chakra.span>
+              <pre>
+                {" "}
+                <chakra.span color={codeSnippet.property}>
+                  amount
+                </chakra.span>:{" "}
+                <chakra.span color={codeSnippet.bracket}>3000</chakra.span>,{" "}
+              </pre>
+              <pre>
+                {" "}
+                <chakra.span
+                  fontWeight={"extrabold"}
+                  color={codeSnippet.function}
+                >
+                  successCallback
+                </chakra.span>
+                : <chakra.span color={codeSnippet.const}>()</chakra.span>{" "}
+                {char.arrow} console.
+                <chakra.span color={codeSnippet.function}>log</chakra.span>
+                <chakra.span color={codeSnippet.const}>(</chakra.span>
+                <chakra.span color={codeSnippet.string}>
+                  "Transaction succesfull"
+                </chakra.span>
+                <chakra.span color={codeSnippet.const}>)</chakra.span>{" "}
+              </pre>
+              <pre> {char.closeBra}) </pre>
+            </Text>
+          </pre>
+          <Text transform="translateX(.8em)">
+            once.
+            <chakra.span color={codeSnippet.function}>checkout</chakra.span>
+            <chakra.span color={codeSnippet.const}>()</chakra.span>
+          </Text>
+          <Text>
+            {char.lt}/
+            <chakra.span color={codeSnippet.property}>script</chakra.span>
+            {char.gt}
+          </Text>
+        </Box>
+        <Text m={"3em 0 1em 0"}>
+          Integration with <strong>React</strong>, first you need to install the
+          npm package by running <Code>npm i checkout-once</Code>
+        </Text>
+        <Box
+          fontSize={{ sm: "16px", xs: "14px", base: "10px" }}
+          mb="2em"
+          width="100%"
+          padding="1em"
+          borderRadius={"10px"}
+          bgColor={"#171c2a"}
+          color="white"
+        >
+          <Box>
+            <Text>
+              {" "}
+              <chakra.span color={codeSnippet.const}>import</chakra.span>{" "}
+              <chakra.span color={codeSnippet.property}>Once</chakra.span>{" "}
+              <chakra.span color={codeSnippet.const}>from</chakra.span>{" "}
+              <chakra.span color={codeSnippet.string}>
+                "checkout-once"
+              </chakra.span>
+              ;{" "}
+            </Text>{" "}
+            <br />
+            <pre>
+              <Text>
+                <chakra.span color={codeSnippet.const}>const </chakra.span>{" "}
+                <chakra.span color={codeSnippet.variableName}>once</chakra.span>{" "}
+                = <chakra.span color={codeSnippet.const}>new</chakra.span>{" "}
+                <chakra.span color={codeSnippet.bracket}>Once</chakra.span>(
+                <chakra.span>
+                  {char.openBra} <br />
+                </chakra.span>
+                <pre>
+                  {" "}
+                  <chakra.span color={codeSnippet.property}>amount</chakra.span>
+                  : <chakra.span color={codeSnippet.bracket}>3000</chakra.span>,{" "}
+                </pre>
+                <pre>
+                  {" "}
+                  <chakra.span
+                    fontWeight={"extrabold"}
+                    color={codeSnippet.function}
+                  >
+                    successCallback
+                  </chakra.span>
+                  : <chakra.span color={codeSnippet.const}>()</chakra.span>{" "}
+                  {char.arrow} console.
+                  <chakra.span color={codeSnippet.function}>log</chakra.span>
+                  <chakra.span color={codeSnippet.const}>(</chakra.span>
+                  <chakra.span color={codeSnippet.string}>
+                    "Transaction succesfull"
+                  </chakra.span>
+                  <chakra.span color={codeSnippet.const}>)</chakra.span>{" "}
+                </pre>
+                <pre>{char.closeBra}) </pre>
+              </Text>
+            </pre>{" "}
+            <br />
+            <Text>
+              once.
+              <chakra.span color={codeSnippet.function}>checkout</chakra.span>
+              <chakra.span color={codeSnippet.const}>()</chakra.span>;
+            </Text>
+          </Box>
+        </Box>
 
-       </Box>
-        <Text m={"3em 0 1em 0"}>Integration with <strong>React</strong>, first you need to install the npm package by running <Code>npm i checkout-once</Code></Text>
-       <Box fontSize={{sm: "16px",xs: "14px", base: "10px"}} mb="2em" width="100%" padding="1em" borderRadius={"10px"} bgColor={"#171c2a"} color="white">
-        <Text> <chakra.span color={codeSnippet.const}>import</chakra.span> <chakra.span color={codeSnippet.property}>Once</chakra.span> <chakra.span color={ codeSnippet.const }>from</chakra.span> <chakra.span color={ codeSnippet.string }>"checkout-once"</chakra.span>; </Text> <br />
-        <pre>
-        <Text><chakra.span color={ codeSnippet.const }>const </chakra.span> <chakra.span color={ codeSnippet.variableName }>once</chakra.span> = <chakra.span color={ codeSnippet.const }>new</chakra.span> <chakra.span color={ codeSnippet.bracket }>Once</chakra.span>(
-                <chakra.span>{ char.openBra } <br /></chakra.span>
-            <pre>      <chakra.span color={ codeSnippet.property }>amount</chakra.span>: <chakra.span color={ codeSnippet.bracket }>3000</chakra.span>,   </pre>
-            <pre>      <chakra.span fontWeight={"extrabold"} color={ codeSnippet.function }>successCallback</chakra.span>: <chakra.span color={ codeSnippet.const }>()</chakra.span> { char.arrow } console.<chakra.span color={ codeSnippet.function }>log</chakra.span><chakra.span color={ codeSnippet.const }>(</chakra.span><chakra.span color={codeSnippet.string}>"Transaction succesfull"</chakra.span><chakra.span color={ codeSnippet.const }>)</chakra.span> </pre>                                                    
-                         <pre>{ char.closeBra })   </pre></Text>
-        </pre> <br />
-         <Text >once.<chakra.span color={ codeSnippet.function }>checkout</chakra.span><chakra.span color={ codeSnippet.const }>()</chakra.span>;</Text>
-      
+        <Text mb={2}>
+          {" "}
+          <strong>amount:</strong> This is the amount you intend to charge for
+          the transaction and must be passed as an integer in kobo.
+        </Text>
+        <Text>
+          {" "}
+          <strong>successCallback:</strong> This method will be called(in
+          real-time) when the initiated transaction is successfull.
+        </Text>
 
-       </Box>
-
-       <Text mb={2}> <strong>amount:</strong>  This is the amount you intend to charge for the transaaction and must be passed as an integer in kobo.</Text>
-       <Text> <strong>successCallback:</strong>  This method will be called(in real-time) when the initiated trasaction is successfull.</Text>
-
-       <Footer />
+        <Footer />
       </Wrapper>
     </Box>
   );
 }
 
 export default Docs;
-
