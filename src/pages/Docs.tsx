@@ -42,15 +42,15 @@ function Docs({}: Props) {
         <HStack my={3} justifyContent="space-between" width="100%">
           <Logo />
           <Button
+            as={"a"}
+            target="_blank"
+            href="https://once-test.vercel.app"
             bgColor={"transparent"}
             color="#7391C8"
             border={"1px solid #7391C8"}
             _hover={{ backgroundColor: "#7391C8", color: "white" }}
             margin="0 auto"
             display={"block"}
-            onClick={() =>
-              window.location.replace("https://once-test.vercel.app")
-            }
           >
             Live Demo 🔗
           </Button>
