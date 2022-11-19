@@ -52,7 +52,7 @@ function Docs({}: Props) {
             margin="0 auto"
             display={"block"}
           >
-            Live Demo 🔗
+            <span style={{ transform: "translateY(.5em)", display: "block"}}>Live Demo 🔗</span> 
           </Button>
         </HStack>
         <Heading
