@@ -70,7 +70,7 @@ export default function Checkout() {
     async function handleClick(e: React.MouseEvent<HTMLDivElement, MouseEvent>) {
       clickHandler( true )
       const res = await axios.get(
-        `https://once-api.herokuapp.com/checkout?provider=${providerKey}&id=${id}`
+        `https://web-production-133c.up.railway.app/checkout?provider=${providerKey}&id=${id}`
       );
   
       const checkoutDetails = res.data;
