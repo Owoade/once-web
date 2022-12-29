@@ -29,7 +29,7 @@ export default function Info() {
   
   
       const res = await axios.patch(
-        "https://once-api.herokuapp.com/update-transaction",
+        "https://once-checkout.onrender.com/update-transaction",
         data
       );
       const serverRes = res.data;
