@@ -44,7 +44,7 @@ function Docs({}: Props) {
           <Button
             as={"a"}
             target="_blank"
-            href="https://once-test.vercel.app"
+            href="https://once-demo-react.vercel.app/"
             bgColor={"transparent"}
             color="#7391C8"
             border={"1px solid #7391C8"}
