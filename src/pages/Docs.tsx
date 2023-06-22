@@ -45,8 +45,8 @@ function Docs({}: Props) {
             as={"a"}
             target="_blank"
             href="https://once-demo-react.vercel.app/"
-            bgColor={"transparent"}
-            color="#7391C8"
+            bgColor={"#52688F"}
+            color="white"
             border={"1px solid #7391C8"}
             _hover={{ backgroundColor: "#7391C8", color: "white" }}
             margin="0 auto"
