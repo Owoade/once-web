@@ -65,12 +65,13 @@ export default function Checkout() {
   }
   
   function PaymentGateway({ name, providerKey, img, clickHandler }: IPG) {
+
     const [id, ref, host] = useCheckoutPayload(window.location.href);
   
     async function handleClick(e: React.MouseEvent<HTMLDivElement, MouseEvent>) {
       clickHandler( true )
       const res = await axios.get(
-        `https://once-checkout-c1210716449a.herokuapp.com/checkout?provider=${providerKey}&id=${id}`
+        `https://api.checkoutonce.com/checkout?provider=${providerKey}&id=${id}`
       );
   
       const checkoutDetails = res.data;
