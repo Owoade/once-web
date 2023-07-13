@@ -44,7 +44,7 @@ function Docs({}: Props) {
           <Button
             as={"a"}
             target="_blank"
-            href="https://once-demo-react.vercel.app/"
+            href="https://demo.checkoutonce.com/"
             bgColor={"#52688F"}
             color="white"
             border={"1px solid #7391C8"}
@@ -71,13 +71,13 @@ function Docs({}: Props) {
         <Text
           textAlign={"center"}
           my={5}
-          width={{ sm: "500px", base: "100%" }}
+          width={{ sm: "700px", base: "100%" }}
           mx="auto"
         >
           A powerful tool that allows developers to simulate a
           transaction checkout experience with multiple payment gateways, all
-          without the need to <strong> create a REST API</strong> or <strong>integrate with actual payment</strong>
-          gateways. It provides a convenient way to test and debug payment flows
+          without the need to <strong> create a REST API</strong> or <strong>integrate with actual payment </strong>
+           gateways. It provides a convenient way to test and debug payment flows
           during the development process.
         </Text>
         <a href="#vjs-sdk">
@@ -124,7 +124,7 @@ function Docs({}: Props) {
             <chakra.span color={codeSnippet.property}>script</chakra.span>{" "}
             <chakra.span color={codeSnippet.bracket}>src</chakra.span>=
             <chakra.span color={codeSnippet.string}>
-              "https://once-checkout-vanilla-sdk.vercel.app/build/sdk.js"
+              "https://cdn.checkoutonce.com/build/sdk.js"
             </chakra.span>{" "}
             /{char.gt}{" "}
           </Text>
