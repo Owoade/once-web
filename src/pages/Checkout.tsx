@@ -49,6 +49,12 @@ export default function Checkout() {
                 img="flw.png"
                 clickHandler={setClicked}
               />
+              <PaymentGateway
+                name="Flutterwave"
+                providerKey="KRP"
+                img="KRP.webp"
+                clickHandler={setClicked}
+              />
             </Box>
           </Box>
           <Footer />
