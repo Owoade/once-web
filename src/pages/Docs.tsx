@@ -52,7 +52,9 @@ function Docs({}: Props) {
             margin="0 auto"
             display={"block"}
           >
-            <span style={{ transform: "translateY(.5em)", display: "block"}}>Live Demo 🔗</span> 
+            <span style={{ transform: "translateY(.5em)", display: "block" }}>
+              Live Demo 🔗
+            </span>
           </Button>
         </HStack>
         <Heading
@@ -72,9 +74,11 @@ function Docs({}: Props) {
           width={{ sm: "500px", base: "100%" }}
           mx="auto"
         >
-          Without <strong>generating an API KEY</strong> or spinning up a{" "}
-          <strong>REST API</strong>, you get to initiate <strong>test</strong>{" "}
-          transactions with just an <strong>API CALL</strong>
+          A powerful tool that allows developers to simulate a
+          transaction checkout experience with multiple payment gateways, all
+          without the need to <strong> create a REST API</strong> or <strong>integrate with actual payment</strong>
+          gateways. It provides a convenient way to test and debug payment flows
+          during the development process.
         </Text>
         <a href="#vjs-sdk">
           <Button
@@ -91,6 +95,7 @@ function Docs({}: Props) {
           <Text>Currently Integrated with </Text>
           <Image borderRadius={"8px"} src="flw.png" width="30px" />
           <Image borderRadius={"8px"} src="pst.jpg" width="30px" />
+          <Image borderRadius={"8px"} src="KRP.webp" width="30px" />
         </HStack>
         <Text id="vjs-sdk" my={3}>
           Integration with <strong>Vanilla Js</strong> websites
