@@ -50,7 +50,7 @@ export default function Checkout() {
                 clickHandler={setClicked}
               />
               <PaymentGateway
-                name="Flutterwave"
+                name="Korapay"
                 providerKey="KRP"
                 img="KRP.webp"
                 clickHandler={setClicked}
