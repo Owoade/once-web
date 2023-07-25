@@ -29,7 +29,7 @@ export default function Info() {
   
   
       const res = await axios.patch(
-        "https://once-checkout.onrender.com/update-transaction",
+        "https://api.checkoutonce.com/update-transaction",
         data
       );
       const serverRes = res.data;
