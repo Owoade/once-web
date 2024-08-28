@@ -5,6 +5,7 @@ import axios from "axios";
 import { Box, Text, chakra, FormControl, FormLabel, Input, Button } from "@chakra-ui/react";
 import Logo from "../components/Logo";
 import Footer from "../components/Footer";
+import { BASE_URL } from "../utils/endpoint";
 export default function Info() {
     const navigate = useNavigate();
     const [id, ref, host] = useCheckoutPayload(window.location.href);
@@ -29,7 +30,7 @@ export default function Info() {
   
   
       const res = await axios.patch(
-        "https://api.checkoutonce.com/update-transaction",
+        `${BASE_URL}/update-transaction`,
         data
       );
       const serverRes = res.data;
