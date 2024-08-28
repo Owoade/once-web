@@ -5,6 +5,7 @@ import Logo from "../components/Logo";
 import useCheckoutPayload from "../hooks/useCheckoutPayload";
 import { useState } from "react"
 import Footer from "../components/Footer";
+import { BASE_URL } from "../utils/endpoint";
 
 export default function Checkout() {
     const [ clicked, setClicked ] = useState( false )
@@ -77,7 +78,7 @@ export default function Checkout() {
     async function handleClick(e: React.MouseEvent<HTMLDivElement, MouseEvent>) {
       clickHandler( true )
       const res = await axios.get(
-        `https://api.checkoutonce.com/checkout?provider=${providerKey}&id=${id}`
+        `${BASE_URL}/checkout?provider=${providerKey}&id=${id}`
       );
   
       const checkoutDetails = res.data;
